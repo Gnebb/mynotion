@@ -45,9 +45,13 @@
 
 <body>
 	<nav class="navMenu  border">
-		<a id="main" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-house"></i> Main Hub</a>
-		<a id="crm" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-contact-book">‌</i> CRM</a>
-		<!-- <a id="id_name" onclick="navigate(this.id)" href="#"> <i class="font_awesome_icon"></i> NAME_OF_PAGE</a> -->
+		<a id="braindump" onclick="navigate(this.id)" href="#"> <i class="fa-regular fa-lightbulb"></i> Brain Dump</a>
+		<a id="life" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-leaf"></i> Life Dashboard</a>
+		<a id="inbox" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-inbox"></i> Inbox</a>
+		<a id="para" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-desktop"></i> Para Dashboard</a>
+		<a id="secondbrain" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-brain"></i> Second Brain</a>
+		<a id="crm" onclick="navigate(this.id)" href="#"> <i class="fa-regular fa-user"></i> CRM</a>
+		<a id="buy" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-cart-shopping"></i> Things to Buy</a>
 	</nav>
 	<script>
 		let direction = "vertical";
@@ -56,12 +60,20 @@
 		}
 		
 		function navigate(id) {
-			if (id == 'main')
-				window.open("https://www.notion.so/Main-Hub-2df7e61b39514efaa737f4e8195e5eb0", '_blank').focus();
+			if (id == 'braindump')
+				window.open("https://www.notion.so/Brain-Dump-7d833f5bfc0a402b8812610207292406", '_blank').focus();
+			else if (id == "life")
+				window.open("https://www.notion.so/Life-Dashboard-38ba4eb350d74a5a9110f0549c9ca4db", '_blank').focus();
+			else if (id == "inbox")
+				window.open("https://www.notion.so/Inbox-941128a2a3654c0ba707bc2eb6ed702b", '_blank').focus();
+			else if (id == "para")
+				window.open("https://www.notion.so/PARA-Dashboard-c1462e6cd0d443769e117ef756585a96", '_blank').focus();
+			else if (id == "secondbrain")
+				window.open("https://www.notion.so/Second-Brain-90058fd2dfd34a4da12f2a795ce918a5", '_blank').focus();
 			else if (id == "crm")
 				window.open("https://www.notion.so/8b342035fa1d4342b21bcbf01befaac0?v=716046d160b34f379d72cd3ebb83c29a", '_blank').focus();
-			//else if (id == "id_from_above")
-			//	window.open("https://www.notion.so/", '_blank').focus();
+			else if (id == "buy")
+				window.open("https://www.notion.so/Things-to-Buy-e80de8255dab4796bce1889cee10ea30", '_blank').focus();
 		}
 	</script>
 </body>
