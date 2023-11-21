@@ -2,10 +2,12 @@
 <html>
 
 <head>
+
 	<!-- Font Awesome -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
-	
+
 	<!-- Google Font -->
+
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet">
@@ -42,7 +44,6 @@
 		}
 	</style>
 </head>
-
 <body>
 	<nav class="navMenu  border">
 		<a id="braindump" onclick="navigate(this.id)" href="#"> <i class="fa-regular fa-lightbulb"></i> Brain Dump</a>
@@ -54,11 +55,10 @@
 		<a id="buy" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-cart-shopping"></i> Things to Buy</a>
 	</nav>
 	<script>
-		let direction = "horizontal";
-		if (direction === "horizontal") {
+		let direction = "vertical";
+		if (direction === "vertical") {
 			document.head.insertAdjacentHTML("beforeend", `<style>.navMenu a {display: block; text-align:left; margin:7px} i{width:15px; margin-right:5px} .navMenu{margin:3px}</style>`)
 		}
-		
 		function navigate(id) {
 			if (id == 'braindump')
 				window.open("https://www.notion.so/Brain-Dump-7d833f5bfc0a402b8812610207292406", '_blank').focus();
@@ -76,5 +76,8 @@
 				window.open("https://www.notion.so/Things-to-Buy-e80de8255dab4796bce1889cee10ea30", '_blank').focus();
 		}
 	</script>
+
+
 </body>
+
 </html>
