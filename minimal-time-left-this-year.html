@@ -79,11 +79,12 @@
         // Calculate the number of days, hours and seconds left to the new year
         const daysLeft = Math.floor(timeLeftInSeconds / (3600 * 24));
         const hoursLeft = Math.floor((timeLeftInSeconds % (3600 * 24)) / 3600);
+        const minutesLeft = Math.floor((timeLeftInSeconds % (3600 * 24)) / 60);
         const secondsLeft = timeLeftInSeconds % 60;
         //Giving the Boxes the Values
         left_days.innerHTML = daysLeft + "<br> <span class=\"small\"> days </span>";
         left_hours.innerHTML = hoursLeft + "<br> <span class=\"small\"> hours</span>";
-        //left_minutes.innerHTML = minutes + "<br> <span class=\"small\">mins</span>";
+        left_minutes.innerHTML = minutesLeft + "<br> <span class=\"small\">mins</span>";
         left_seconds.innerHTML = secondsLeft + "<br> <span class=\"small\">secs</span>";
     }
 
