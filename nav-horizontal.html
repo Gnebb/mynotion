@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+	
+	<!-- Google Font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet">
+	
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			-webkit-box-sizing: border-box;
+			box-sizing: border-box;
+		}
+		.navMenu {
+			font-family: 'Advent Pro', sans-serif;
+			padding: 8px;
+			text-align: center;
+			margin: 7px auto;
+			width: fit-content;
+		}
+		.navMenu a {
+			color: #272727;
+			text-decoration: none;
+			text-transform: uppercase;
+			display: inline-block;
+			padding: 6px;
+		}
+		.background {
+			background-color: #ece5f0;
+		}
+		.border {
+			border: 1px solid #cccccc;
+		}
+		.navMenu a:hover {
+			color: #d09c0b;
+		}
+	</style>
+</head>
+
+<body>
+	<nav class="navMenu  border">
+		<a id="braindump" onclick="navigate(this.id)" href="#"> <i class="fa-regular fa-lightbulb"></i> Brain Dump</a>
+		<a id="life" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-leaf"></i> Life Dashboard</a>
+		<a id="inbox" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-inbox"></i> Inbox</a>
+		<a id="para" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-desktop"></i> Para Dashboard</a>
+		<a id="secondbrain" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-brain"></i> Second Brain</a>
+		<a id="crm" onclick="navigate(this.id)" href="#"> <i class="fa-regular fa-user"></i> CRM</a>
+		<a id="buy" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-cart-shopping"></i> Things to Buy</a>
+	</nav>
+	<script>
+		let direction = "horizontal";
+		if (direction === "horizontal") {
+			document.head.insertAdjacentHTML("beforeend", `<style>.navMenu a {display: block; text-align:left; margin:7px} i{width:15px; margin-right:5px} .navMenu{margin:3px}</style>`)
+		}
+		
+		function navigate(id) {
+			if (id == 'braindump')
+				window.open("https://www.notion.so/Brain-Dump-7d833f5bfc0a402b8812610207292406", '_blank').focus();
+			else if (id == "life")
+				window.open("https://www.notion.so/Life-Dashboard-38ba4eb350d74a5a9110f0549c9ca4db", '_blank').focus();
+			else if (id == "inbox")
+				window.open("https://www.notion.so/Inbox-941128a2a3654c0ba707bc2eb6ed702b", '_blank').focus();
+			else if (id == "para")
+				window.open("https://www.notion.so/PARA-Dashboard-c1462e6cd0d443769e117ef756585a96", '_blank').focus();
+			else if (id == "secondbrain")
+				window.open("https://www.notion.so/Second-Brain-90058fd2dfd34a4da12f2a795ce918a5", '_blank').focus();
+			else if (id == "crm")
+				window.open("https://www.notion.so/8b342035fa1d4342b21bcbf01befaac0?v=716046d160b34f379d72cd3ebb83c29a", '_blank').focus();
+			else if (id == "buy")
+				window.open("https://www.notion.so/Things-to-Buy-e80de8255dab4796bce1889cee10ea30", '_blank').focus();
+		}
+	</script>
+</body>
+</html>
