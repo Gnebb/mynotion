@@ -72,15 +72,15 @@
         left_minutes = document.getElementById("minutes");
         left_seconds = document.getElementById("seconds");
         // Get the current date and the date of the new year
-        const currentDate = new Date();
-        const newYearDate = new Date(currentDate.getFullYear() + 1, 0, 1);
+        const now = new Date();
+        const newYear = new Date(now.getFullYear() + 1, 0, 1);
         // Calculate the time left to the new year in seconds
-        const timeLeftInSeconds = Math.floor((newYearDate - currentDate) / 1000);
+        const timeDifference = newYear - now;
         // Calculate the number of days, hours and seconds left to the new year
-        const daysLeft = Math.floor(timeLeftInSeconds / (3600 * 24));
-        const hoursLeft = Math.floor((timeLeftInSeconds % (3600 * 24)) / 3600);
-        const minutesLeft = Math.floor((timeLeftInSeconds % (3600 * 24)) / 60);
-        const secondsLeft = timeLeftInSeconds % 60;
+        const daysLeft = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+        const hoursLeft = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutesLeft = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+        const secondsLeft = Math.floor((timeDifference % (1000 * 60)) / 1000);
         //Giving the Boxes the Values
         left_days.innerHTML = daysLeft + "<br> <span class=\"small\"> days </span>";
         left_hours.innerHTML = hoursLeft + "<br> <span class=\"small\"> hours</span>";
